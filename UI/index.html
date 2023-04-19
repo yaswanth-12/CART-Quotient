@@ -30,6 +30,46 @@
     <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css">
     <link rel="stylesheet" href="css/css-mbr-additional.css" type="text/css">
 
+    <style>
+		#map {
+			height: 520px;
+			width: 100%;
+		}
+	</style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEQNE1cY3gMK1cALJ5NgecManSI4zpGMA"></script>
+	<script>
+		function initMap() {
+			var myLatLng = {lat: 10.905084781333152, lng: 76.89890077704983};
+
+			var map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 15,
+				center: myLatLng
+			});
+
+			var infowindow = new google.maps.InfoWindow({
+				content: "<h5>WiCyS Amrita Student Chapter TIFAC-CORE in CYberSecurity Amrita School of Engineering</h5>"
+                
+			});
+
+			var marker = new google.maps.Marker({
+				position: myLatLng,
+				map: map,
+				title: 'WiCyS Amrita Student Chapter TIFAC-CORE in CYberSecurity Amrita School of Engineering'
+			});
+
+			marker.addListener('mouseover', function() {
+				infowindow.open(map, marker);
+			});
+
+			marker.addListener('mouseout', function() {
+				infowindow.close();
+			});
+		}
+	</script>
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEQNE1cY3gMK1cALJ5NgecManSI4zpGMA&callback=initMap">
+	</script>
+
 </head>
 
 <body>
@@ -810,7 +850,8 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-6 image-wrapper">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1822.4382050751908!2d76.89791455567635!3d10.904276835019528!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85c946fa8a845%3A0xad031eba05b6bf78!2sTIFAC%20CORE%20in%20Cyber%20Security!5e0!3m2!1sen!2sin!4v1681901209531!5m2!1sen!2sin" width="600" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1822.4382050751908!2d76.89791455567635!3d10.904276835019528!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85c946fa8a845%3A0xad031eba05b6bf78!2sTIFAC%20CORE%20in%20Cyber%20Security!5e0!3m2!1sen!2sin!4v1681901209531!5m2!1sen!2sin" width="600" height="520" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                    <div id="map"></div>
                 </div>
             </div>
 
