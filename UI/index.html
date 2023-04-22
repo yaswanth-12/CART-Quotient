@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <!-- Site made with Mobirise Website Builder v5.4.0, https://mobirise.com -->
     <meta charset="UTF-8">
@@ -31,43 +32,43 @@
     <link rel="stylesheet" href="css/css-mbr-additional.css" type="text/css">
 
     <style>
-		#map {
-			height: 520px;
-			width: 100%;
-		}
-	</style>
-	<script>
-		function initMap() {
-			var myLatLng = {lat: 10.905084781333152, lng: 76.89890077704983};
+        #map {
+            height: 520px;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function initMap() {
+            var myLatLng = { lat: 10.905084781333152, lng: 76.89890077704983 };
 
-			var map = new google.maps.Map(document.getElementById('map'), {
-				zoom: 15,
-				center: myLatLng
-			});
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: myLatLng
+            });
 
-			var infowindow = new google.maps.InfoWindow({
-				content: "<h5>WiCyS Amrita Student Chapter TIFAC-CORE in CYberSecurity Amrita School of Engineering</h5>"
-                
-			});
+            var infowindow = new google.maps.InfoWindow({
+                content: "<h5>WiCyS Amrita Student Chapter TIFAC-CORE in CYberSecurity Amrita School of Engineering</h5>"
 
-			var marker = new google.maps.Marker({
-				position: myLatLng,
-				map: map,
-				title: 'WiCyS Amrita Student Chapter TIFAC-CORE in CYberSecurity Amrita School of Engineering'
-			});
+            });
 
-			marker.addListener('mouseover', function() {
-				infowindow.open(map, marker);
-			});
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'WiCyS Amrita Student Chapter TIFAC-CORE in CYberSecurity Amrita School of Engineering'
+            });
 
-			marker.addListener('mouseout', function() {
-				infowindow.close();
-			});
-		}
-	</script>
-	<script async
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEQNE1cY3gMK1cALJ5NgecManSI4zpGMA&callback=initMap">
-	</script>
+            marker.addListener('mouseover', function () {
+                infowindow.open(map, marker);
+            });
+
+            marker.addListener('mouseout', function () {
+                infowindow.close();
+            });
+        }
+    </script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEQNE1cY3gMK1cALJ5NgecManSI4zpGMA&callback=initMap">
+        </script>
 
 </head>
 
@@ -107,9 +108,9 @@
                                 Contact</a></li>
                     </ul>
                     <div class="navbar-buttons align-right mbr-section-btn"><a class="btn btn-primary display-4"
-                            href="https://mobiri.se"><span
+                            href="./html/ChallengeHome.html"><span
                                 class="mobi-mbri mobi-mbri-arrow-next mbr-iconfont mbr-iconfont-btn"></span>
-                            Get Started</a></div>
+                            Take Test</a></div>
                 </div>
             </div>
         </nav>
@@ -230,7 +231,8 @@
                         </div-->
                     </div>
                 </div>
-                <div class="col-12 col-md-12 col-lg-6 image-wrapper" style="margin-top:40px; margin-left:40px; width: 40%;" >
+                <div class="col-12 col-md-12 col-lg-6 image-wrapper"
+                    style="margin-top:40px; margin-left:40px; width: 40%;">
                     <img class="w-100" src="images/WiCyS_Amrita.png" alt="WiCyS Amrita Student Chapter">
                 </div>
             </div>
