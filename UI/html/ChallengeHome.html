@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cyber ART Quotient</title>
+  <link rel="stylesheet" type="text/css" href="../css/challenge_style.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+</head>
+<body>
+
+<nav>
+  <ul>
+  <li style="float:right"><a href="#home">Home</a></li>
+  <li style="float:right"><a href="#news">News</a></li>
+  <li style="float:right"><a href="#contact">Contact</a></li>
+  <li style="float:right"><a href="#about">About</a></li>
+  </ul>
+</nav>
+  
+  <div class="header">
+  <div class="inner-header flex">
+    
+      <center>
+        <h1>Cyber ART Quotient</h1>
+<p style="font-size: 25px;">A measurement of an individual's ability to manage and navigate the digital world safely and effectively. It encompasses the skills and knowledge necessary for individuals to interact with technology in a secure and ethical manner.</p>
+<p style="font-size: 25px;">Awareness, Recogniton, Treatment</p>
+</center>
+
+ </div>
+
+<div>
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+      </defs>
+      <g class="parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+      </g>
+    </svg>
+  </div>
+</div>
+
+
+<section id="card"> 
+<div class="wrapper">
+  <div class="card-inner">
+  <div class="card">
+    <i class="fa-solid fa-a"></i>
+    <div class="info">
+      <h1>Awareness</h1>
+      <p>Lorem Ipsum is simply dummy text from the printing and typeseting industry</p>
+      <button>Read More</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="card2.jpg">
+    <div class="info">
+      <h1>Recognition</h1>
+      <p>Lorem Ipsum is simply dummy text from the printing and typeseting industry</p>
+      <button>Read More</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="card3.jpg">
+    <div class="info">
+      <h1>Treatment</h1>
+      <p>Lorem Ipsum is simply dummy text from the printing and typeseting industry</p>
+      <button>Read More</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<center><button class="button1">Start the test</button></center>
+
+</section>
+
+
+<div class="footer">
+  <p>&copy; Cyber ART Quotient - WiCyS Amrita Student Chapter.<br> TIFAC - CORE Cyber Security<br> Amrita Vishwa Vidyapeetham<br> Coimbatore</p>
+</div>
+
+<script>
+let root = document.documentElement;
+const section1 = document.querySelector(".header");
+
+window.addEventListener("scroll", () => {
+  const y = 1 + (window.scrollY || window.pageYOffset);
+  root.style.setProperty("--gradient-percent", y * 4 + "px");
+  console.log(y);
+});
+</script>
+</body>
+</html>
