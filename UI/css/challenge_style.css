@@ -3,6 +3,23 @@
   box-sizing: border-box;
 }
 
+.navbar a {
+  font-family: 'Inter', sans-serif;
+  color: black !important;
+}
+
+.nav-item {
+  font-size: 19.2px;
+}
+
+.navbar-collapse {
+  margin-left: 12cm !important;
+}
+
+.navbar-caption {
+  font-size: 35.2px !important;
+}
+
 .header {
   position: relative;
   text-align: center;
@@ -17,12 +34,14 @@
   display: inline-block;
   vertical-align: middle;
 }
+
 .inner-header {
   height: 65vh;
   width: 100%;
   margin: 0;
   padding: 0;
 }
+
 .flex {
   /*Flexbox for containers*/
   display: flex;
@@ -30,6 +49,7 @@
   align-items: center;
   text-align: center;
 }
+
 .waves {
   position: relative;
   width: 100%;
@@ -46,43 +66,53 @@
   text-align: center;
   background-color: white;
 }
+
 /* Animation */
-.parallax > use {
+.parallax>use {
   animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
-.parallax > use:nth-child(1) {
+
+.parallax>use:nth-child(1) {
   animation-delay: -2s;
   animation-duration: 7s;
 }
-.parallax > use:nth-child(2) {
+
+.parallax>use:nth-child(2) {
   animation-delay: -3s;
   animation-duration: 10s;
 }
-.parallax > use:nth-child(3) {
+
+.parallax>use:nth-child(3) {
   animation-delay: -4s;
   animation-duration: 13s;
 }
-.parallax > use:nth-child(4) {
+
+.parallax>use:nth-child(4) {
   animation-delay: -5s;
   animation-duration: 20s;
 }
+
 @keyframes move-forever {
   0% {
     transform: translate3d(-90px, 0, 0);
   }
+
   100% {
     transform: translate3d(85px, 0, 0);
   }
 }
+
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
   .waves {
     height: 40px;
     min-height: 40px;
   }
+
   .content {
     height: 30vh;
   }
+
   h1 {
     font-size: 24px;
   }
@@ -160,7 +190,7 @@ li a:hover {
   display: flex;
   align-items: flex-end;
   transition: 0.4s ease-out;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .card:hover {
@@ -245,14 +275,14 @@ li a:hover {
 }
 
 .card .info button:hover {
-  background-color: white; 
-  color: black; 
+  background-color: white;
+  color: black;
   border: 2px solid black;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .button1 {
-  margin-top: 10px;
+  margin-bottom: 20px;
   background-color: LightPink;
   color: white;
   border: 2px solid black;
@@ -265,12 +295,8 @@ li a:hover {
 }
 
 .button1:hover {
-  background-color: white; 
-  color: black; 
+  background-color: white;
+  color: black;
   border: 2px solid black;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
-
-
-
-
