@@ -592,6 +592,7 @@ body {
 }
 
 .footer {
+    margin-top: 1cm;
     color : rgb(238, 238, 238);
     font-family: 'Inter', sans-serif;
 }
