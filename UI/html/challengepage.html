@@ -18,13 +18,30 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 
+<script>
+  window.onload = function() {
+    let timeCounter = document.querySelector('.time-counter');
+    let elapsedTime = 0;
+    setInterval(function() {
+      elapsedTime += 1;
+      timeCounter.textContent = elapsedTime;
+    }, 1000);
+  }
 
+  function next() {
+    let timeCounter = document.querySelector('.time-counter');
+    let elapsedTime = timeCounter.textContent;
+    console.log(elapsedTime);
+    // do something with the elapsed time
+  }
+</script>
 
 <body>
 
   <div class="nav">
     <div class="nav-left">
-      <img src="../images/logo_for_resultpage.png">
+      <!-- <img src="../images/logo_for_resultpage.png"> -->
+      <div class="background_counter move_timer">Time Count: <span class="time-counter">0</span></div>
     </div>
 
     <div class="nav-right">
@@ -40,35 +57,16 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
     <nav>
       <ul>
         <li>
-          <div class="home-icon">
-            <div class="roof">
-              <div class="roof-edge"></div>
-            </div>
-            <div class="front"></div>
-          </div>
+          <img src="../favicons/images-logo.png">
         </li>
         <li>
-          <div class="about-icon">
-            <div class="head">
-              <div class="eyes"></div>
-              <div class="beard"></div>
-            </div>
-          </div>
+          <img src="../favicons/images-logo.png">
         </li>
         <li>
-          <div class="work-icon">
-            <div class="paper"></div>
-            <div class="lines"></div>
-            <div class="lines"></div>
-            <div class="lines"></div>
-          </div>
+          <img src="../favicons/images-logo.png">
         </li>
         <li>
-          <div class="mail-icon">
-            <div class="mail-base">
-              <div class="mail-top"></div>
-            </div>
-          </div>
+          <img src="../favicons/images-logo.png">
         </li>
       </ul>
     </nav>
@@ -90,7 +88,8 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
                 genuine license for it is costly. Consequently, you opt to obtain a pirated version from the internet.
                 <br>
                 Now, you may click on the 'View Attachment' option to access the website and initiate the download of
-                the pirated version. </p>
+                the pirated version.
+              </p>
 
               <!-- <div class="details">
                 <h2> Someone famous <br> <span>Backend developer</span></h2>
@@ -102,7 +101,7 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
 
       <div class="vertical_container">
 
-        <a target="_blank"><button class="buttonnext hori_move">Next <span>&#8594;</span>
+        <a target="_blank"><button class="buttonnext hori_move" onclick="next()">Next <span>&#8594;</span>
           </button></a>
         <a><button class="buttonnext">Submit </button></a> <br>
 
@@ -114,7 +113,7 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
               </div>
               <div class="content">
                 <h6>View Attachment</h6>
-                <p><a href="./session1.html">Click here to download Adobe Photoshop</a></p>
+                <p><a target="_blank" href="./session1.html">Click here to download Adobe Photoshop</a></p>
                 <!-- <div class="details">
                   <h2> Someone famous <br> <span>Front end developer</span></h2>
                 </div> -->
@@ -142,7 +141,7 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
             </div>
           </div>
         </div>
-        
+
       </div>
 
 

@@ -51,7 +51,7 @@
   height: 200%;
   width: 100%;
   left: 0;
-  background: linear-gradient(to left, orange, tomato);
+  background: linear-gradient(to left, #ffa500, tomato);
   transition: 0.5s;
 
 }
