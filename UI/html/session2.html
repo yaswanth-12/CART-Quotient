@@ -19,7 +19,7 @@
                 <div class="button-container">
                     <button type="submit" class="button submit">Submit</button> &nbsp;
                     <button type="button" id="learn-more" class="button learn-more">Learn More</button> &nbsp;
-                    <button type="button" class="button back">Back to Challenge page</button> &nbsp;
+                    <button type="button" class="button back" id="goback">Back to Challenge page</button> &nbsp;
                 </div>
             </form>
         </div>
@@ -50,10 +50,13 @@
         const popup = document.getElementById('popup');
         const popupClose = document.getElementById('popup-close');
         const popupOverlay = document.getElementById('popup-overlay');
+        const gobackbutton = document.getElementById('goback');
 
         learnMoreButton.addEventListener('click', () => {
             popup.style.display = 'flex';
         });
+
+        gobackbutton.addEventListener('click', () =>  {window.close(); });
 
         popupClose.addEventListener('click', () => {
             popup.style.display = 'none';

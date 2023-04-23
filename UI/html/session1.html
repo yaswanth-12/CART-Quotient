@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Password Change Confirmation</title>
+</head>
+<body>
+    <iframe src="../images/session_background.png" width="1400" height="600"></iframe>
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                if (confirm("Session Expired. Do you want to change the password?")) {
+                    window.open("session2.html", "_blank");
+                    window.close();
+                } else {
+                    window.close();
+                }
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
