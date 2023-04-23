@@ -46,3 +46,7 @@ body {
   margin-top: 3cm;
   padding: 0 0 1cm 0;
 }
+
+.hori_move {
+  margin-left: -1cm;
+}
