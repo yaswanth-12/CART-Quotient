@@ -610,7 +610,7 @@ body {
     background: #EEEEEE;
     border-radius: 10px;
     width: 120px;
-    height: 80px;
+    height: 70px;
     margin-left: -40px;
     position: absolute;
     color: #FFFFFF;
@@ -624,7 +624,7 @@ body {
     transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
  }
  .menu-open-button p {
-    padding: 10px 20px 10px 20px;
+    padding: 8px 16px 8px 16px;
     color: black;
     margin-top: -10px;
  }
