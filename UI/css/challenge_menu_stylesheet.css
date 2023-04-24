@@ -34,7 +34,7 @@ nav ul li {
     list-style-type: none;
     width: 70px;
     cursor: pointer;
-    background: #ffa500;
+    background: crimson;
     text-transform: uppercase;
     transition: all .4s ease-out;
 }
@@ -47,7 +47,7 @@ nav ul li img {
 nav ul li:after {
     position: absolute;
     background: white;
-    color: rgb(4, 4, 4);
+    color: crimson;
     top: 0;
     left: 70px;
     width: 70px;
@@ -237,7 +237,7 @@ nav ul li div {
     width: 25px;
     height: 29px;
     background: white;
-    border-top: 4px solid #dc143c;
+    border-top: 4px solid crimson;
 }
 
 .lines {

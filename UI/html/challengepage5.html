@@ -19,10 +19,10 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
 </head>
 
 <script>
-  window.onload = function() {
+  window.onload = function () {
     let timeCounter = document.querySelector('.time-counter');
     let elapsedTime = 0;
-    setInterval(function() {
+    setInterval(function () {
       elapsedTime += 1;
       timeCounter.textContent = elapsedTime;
     }, 1000);
@@ -57,16 +57,35 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
     <nav>
       <ul>
         <li>
-          <img src="../favicons/images-logo.png">
+          <div class="home-icon">
+            <div class="roof">
+              <div class="roof-edge"></div>
+            </div>
+            <div class="front"></div>
+          </div>
         </li>
         <li>
-          <img src="../favicons/images-logo.png">
+          <div class="about-icon">
+            <div class="head">
+              <div class="eyes"></div>
+              <div class="beard"></div>
+            </div>
+          </div>
         </li>
         <li>
-          <img src="../favicons/images-logo.png">
+          <div class="work-icon">
+            <div class="paper"></div>
+            <div class="lines"></div>
+            <div class="lines"></div>
+            <div class="lines"></div>
+          </div>
         </li>
         <li>
-          <img src="../favicons/images-logo.png">
+          <div class="mail-icon">
+            <div class="mail-base">
+              <div class="mail-top"></div>
+            </div>
+          </div>
         </li>
       </ul>
     </nav>
@@ -78,13 +97,15 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
             <div class="layer">
 
             </div>
-            <div class="content">
-              <p>You're a graphic designer. Sitting in your home office, sipping your cup of hot coffee. You take a deep
+            <div class="content biggerfont">
+              <p style="font-size: 21px;">You're a graphic designer. Sitting in your home office, sipping your cup of
+                hot coffee. <br><br> You take a deep
                 breath and open up your design software, feeling inspired by the peaceful and serene morning. <br>
                 You start sketching out ideas to create a logo for a new project, a brand identity for a client who is
                 launching a sustainable clothing line. <br>
 
-                The plan is to utilize the most up-to-date edition of Adobe Photoshop for creating the logo. However, a
+                The plan is to utilize the most up-to-date edition of Adobe Photoshop for creating the logo. <br><br>
+                However, a
                 genuine license for it is costly. Consequently, you opt to obtain a pirated version from the internet.
                 <br>
                 Now, you may click on the 'View Attachment' option to access the website and initiate the download of
@@ -109,11 +130,11 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
           <div class="card2_specifics">
             <div class="card">
               <div class="layer">
-
               </div>
               <div class="content">
-                <h6>View Attachment</h6>
-                <p><a target="_blank" href="./session1.html">Click here to download Adobe Photoshop</a></p>
+                <a target="_blank" href="./session1.html">
+                  <h6>View Attachment</h6>
+                </a>
                 <!-- <div class="details">
                   <h2> Someone famous <br> <span>Front end developer</span></h2>
                 </div> -->
@@ -128,12 +149,9 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
           <div class="card2_specifics">
             <div class="card">
               <div class="layer">
-
               </div>
               <div class="content">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam iusto ea tenetur quas facere minima
-                  obcaecati mollitia sed ipsum quod, eius repellat nihil quos. Saepe ipsa veritatis magni voluptates
-                  voluptatum.</p>
+                <h6>Options:</h6>
                 <!-- <div class="details">
                   <h2> Someone famous <br> <span>Website designer</span></h2>
                 </div> -->
