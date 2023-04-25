@@ -18,6 +18,47 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 
+<style>
+  /* 
+Authors:  Deepthi Jayanth
+Created Date: 19 Apr 2023
+
+Description: Assessment Page containing Problem Description, Attachment (if any), Answer Box, Progress Bar */
+
+
+.progress {
+  background: rgba(255, 255, 255, 0.1);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: flex;
+  height: 30px;
+  width: 400px;
+  margin-left: -12cm;
+}
+
+.progress-value {
+  animation: load 3s normal forwards;
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 30px;
+  width: 0;
+}
+
+@keyframes load {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 80%;
+  }
+}
+</style>
+
 <script>
   window.onload = function () {
     let timeCounter = document.querySelector('.time-counter');
