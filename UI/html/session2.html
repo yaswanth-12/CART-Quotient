@@ -10,7 +10,8 @@
 
 <body>
     <div class="container">
-        <h2>Session Expired</h2>
+        <h2>Login Failed.</h2>
+        <h4>Please reset your password to continue downloading. </h4>
         <form>
             <label for="new-password">New Password</label>
             <input type="password" id="new-password" required>
@@ -66,7 +67,7 @@
             popup.style.display = 'flex';
         });
 
-        gobackbutton.addEventListener('click', () => { window.close(); });
+        gobackbutton.addEventListener('click', () => { window.open("options_1.html", "_blank"); });
 
         popupClose.addEventListener('click', () => {
             popup.style.display = 'none';
