@@ -75,11 +75,15 @@
 .testimotionals .card .content {
   z-index: 2;
   position: relative;
+  text-align: justify;
 }
 
 .card .content a {
-  text-decoration: none;
-  color: black;
+  color: rgb(0, 98, 255);
+}
+
+.h6_move h6{
+  margin-top: 10px;
 }
 
 .testimotionals .card:hover .layer {

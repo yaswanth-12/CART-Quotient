@@ -29,45 +29,6 @@
     <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css">
     <link rel="stylesheet" href="css/css-mbr-additional.css" type="text/css">
 
-    <style>
-        #map {
-            height: 530px;
-            width: 630px;
-            border-radius: 6px;
-        }
-    </style>
-    <script>
-        function initMap() {
-            var myLatLng = { lat: 10.905084781333152, lng: 76.89890077704983 };
-
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 15,
-                center: myLatLng
-            });
-
-            var infowindow = new google.maps.InfoWindow({
-                content: "<h5>WiCyS Amrita Student Chapter TIFAC-CORE in CYberSecurity Amrita School of Engineering</h5>"
-
-            });
-
-            var marker = new google.maps.Marker({
-                position: myLatLng,
-                map: map,
-                title: 'WiCyS Amrita Student Chapter TIFAC-CORE in CYberSecurity Amrita School of Engineering'
-            });
-
-            marker.addListener('mouseover', function () {
-                infowindow.open(map, marker);
-            });
-
-            marker.addListener('mouseout', function () {
-                infowindow.close();
-            });
-        }
-    </script>
-    <script async
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEQNE1cY3gMK1cALJ5NgecManSI4zpGMA&callback=initMap">
-        </script>
 
 </head>
 
@@ -599,7 +560,7 @@
         <div class="container">
             <div class="mbr-section-head">
                 <h4 class="mbr-section-title align-left mbr-fonts-style mb-0 display-5">
-                    Out Team</h4>
+                    Our Team</h4>
 
             </div>
             <div class="row mt-4">
@@ -843,7 +804,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-6 image-wrapper">
-                    <div id="map"></div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.770704265746!2d76.89402227688176!3d10.905023061537738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85c946fa8a845%3A0xad031eba05b6bf78!2sTIFAC%20CORE%20in%20Cyber%20Security!5e0!3m2!1sen!2sin!4v1682436472666!5m2!1sen!2sin" width="600" height="520" style="border:0; border-radius:10px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
