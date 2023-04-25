@@ -1,11 +1,225 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    
+
 </head>
 
+<style>
+    body {
+        background-image: url("../images/challengepage_background.jpg");
+        background-size: 100%;
+    }
+
+    .card {
+        text-align: center;
+        width: 6cm;
+        height: 8.5cm;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        margin: 0 1cm 1cm 0;
+    }
+
+    .row1,
+    .row2 {
+        display: inline-flex;
+        margin-top: 1cm;
+        margin-left: 2.3cm;
+    }
+
+    .row1 {
+        margin-top: 2cm !important;
+    }
+
+    .card img {
+        margin-top: 0.5cm;
+        width: 120px;
+        height: 120px;
+    }
+
+    .checkbox-wrapper-25 input[type="checkbox"] {
+        background-image: -webkit-linear-gradient(hsla(0, 0%, 0%, .1), hsla(0, 0%, 100%, .1)),
+            -webkit-linear-gradient(left, #da0303 50%, #a8d227 50%);
+        background-size: 100% 100%, 200% 100%;
+        background-position: 0 0, 15px 0;
+        border-radius: 25px;
+        box-shadow: inset 0 1px 4px hsla(0, 0%, 0%, .5),
+            inset 0 0 10px hsla(0, 0%, 0%, .5),
+            0 0 0 1px hsla(0, 0%, 0%, .1),
+            0 -1px 2px 2px hsla(0, 0%, 0%, .25),
+            0 2px 2px 2px hsla(0, 0%, 100%, .75);
+        cursor: pointer;
+        height: 20px;
+        padding-right: 20px;
+        width: 60px;
+        -webkit-appearance: none;
+        -webkit-transition: .25s;
+        transition: all;
+        appearance: initial;
+    }
+
+    .checkbox-wrapper-25 {
+        margin-top: 0.5cm;
+        text-align: left;
+        line-height: 30px;
+    }
+
+    .checkbox-wrapper-25 span {
+        margin-left: 1cm;
+        display: inline-flex;
+    }
+
+    .checkbox-wrapper-25 span label {
+        margin-top: -2px;
+        margin-left: 5px;
+        font-size: 18px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .checkbox-wrapper-25 input[type="checkbox"]:after {
+        background-color: #eee;
+        background-image: -webkit-linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 0%, .1));
+        border-radius: 25px;
+        box-shadow: inset 0 1px 1px 1px hsla(0, 0%, 100%, 1),
+            inset 0 -1px 1px 1px hsla(0, 0%, 0%, .25),
+            0 1px 3px 1px hsla(0, 0%, 0%, .5),
+            0 0 2px hsla(0, 0%, 0%, .25);
+        content: '';
+        display: block;
+        height: 20px;
+        width: 35px;
+    }
+
+    .checkbox-wrapper-25 input[type="checkbox"]:checked {
+        background-position: 0 0, 35px 0;
+        padding-left: 25px;
+        padding-right: 0;
+    }
+
+    .buttonnext {
+        background-color: rgb(219, 196, 140);
+        color: rgb(0, 0, 0);
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 8px 16px;
+        font-size: 27px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        font-family: "Century Gothic", sans-serif;
+        margin: 0.5cm 0 1cm 0;
+    }
+
+    .buttonnext:hover {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .buttonnext span {
+        content: "\2192";
+    }
+</style>
+
 <body>
+    <div class="row1">
+        <div class="card">
+            <img src="../images/apps/adobe-scan-200.png">
+            <div class="checkbox-wrapper-25">
+                <span> <input type="checkbox"> <label>Camera</label> </span> <br>
+                <span> <input type="checkbox"> <label>Call logs </label> </span> <br>
+                <span> <input type="checkbox"> <label>Contacts</label> </span> <br>
+                <span> <input type="checkbox"> <label>Storage</label> </span> <br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../images/apps/duolingo-logo-200.png">
+            <div class="checkbox-wrapper-25">
+                <span> <input type="checkbox"> <label>Microphone</label> </span> <br>
+                <span> <input type="checkbox"> <label>Contacts</label> </span> <br>
+                <span> <input type="checkbox"> <label>Location</label> </span> <br>
+                <span> <input type="checkbox"> <label>Storage</label> </span> <br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../images/apps/facebook-200.png">
+            <div class="checkbox-wrapper-25">
+                <span> <input type="checkbox"> <label>Camera</label> </span> <br>
+                <span> <input type="checkbox"> <label>Sensors</label> </span> <br>
+                <span> <input type="checkbox"> <label>Location</label> </span> <br>
+                <span> <input type="checkbox"> <label>Microphone</label> </span> <br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../images/apps/google-maps-200.png">
+            <div class="checkbox-wrapper-25">
+                <span> <input type="checkbox"> <label>Contacts</label> </span> <br>
+                <span> <input type="checkbox"> <label>Location</label> </span> <br>
+                <span> <input type="checkbox"> <label>Call logs</label> </span> <br>
+                <span> <input type="checkbox"> <label>Microphone</label> </span> <br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../images/apps/twitter-200.png">
+            <div class="checkbox-wrapper-25">
+                <span> <input type="checkbox"> <label>Camera</label> </span> <br>
+                <span> <input type="checkbox"> <label>Calender</label> </span> <br>
+                <span> <input type="checkbox"> <label>Location</label> </span> <br>
+                <span> <input type="checkbox"> <label>Microphone</label> </span> <br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row2">
+        <div class="card">
+            <img src="../images/apps/youtube-200.png">
+            <div class="checkbox-wrapper-25">
+                <span> <input type="checkbox"> <label>Camera</label> </span> <br>
+                <span> <input type="checkbox"> <label>Microphone</label> </span> <br>
+                <span> <input type="checkbox"> <label>storage</label> </span> <br>
+                <span> <input type="checkbox"> <label>contacts</label> </span> <br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../images/apps/dropbox-200.png">
+            <div class="checkbox-wrapper-25">
+                <span> <input type="checkbox"> <label>Location</label> </span> <br>
+                <span> <input type="checkbox"> <label>Storage</label> </span> <br>
+                <span> <input type="checkbox"> <label>SMS</label> </span> <br>
+                <span> <input type="checkbox"> <label>Call logs</label> </span> <br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../images/apps/todolist.png"
+                style="width: 100px; height: 100px;margin-top:1cm; border-radius: 10px">
+            <div class="checkbox-wrapper-25">
+                <span> <input type="checkbox"> <label>Call logs</label> </span> <br>
+                <span> <input type="checkbox"> <label>Storage</label> </span> <br>
+                <span> <input type="checkbox"> <label>Calendar</label> </span> <br>
+                <span> <input type="checkbox"> <label>Location</label> </span> <br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../images/apps/headspace.png">
+            <div class="checkbox-wrapper-25">
+                <span> <input type="checkbox"> <label>Storage</label> </span> <br>
+                <span> <input type="checkbox"> <label>Calendar</label> </span> <br>
+                <span> <input type="checkbox"> <label>SMS</label> </span> <br>
+                <span> <input type="checkbox"> <label>Call logs</label> </span> <br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../images/apps/myfitnesspal.png">
+            <div class="checkbox-wrapper-25">
+                <span> <input type="checkbox"> <label>Camera</label> </span> <br>
+                <span> <input type="checkbox"> <label>Storage</label> </span> <br>
+                <span> <input type="checkbox"> <label>Sensor</label> </span> <br>
+                <span> <input type="checkbox"> <label>Call logs</label> </span> <br>
+            </div>
+        </div>
+    </div>
+
+    <center><a><button class="buttonnext">Submit </button></a></center>
 
 </body>
 
