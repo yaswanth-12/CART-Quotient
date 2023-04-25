@@ -73,7 +73,7 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
     .main_container {
         margin-left: 3.8cm;
     }
-    
+
     .progress {
         background: rgba(255, 255, 255, 0.1);
         justify-content: flex-start;
@@ -96,7 +96,7 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
         width: 0;
     }
 
-    .card2_specifics .card .h6_move p{
+    .card2_specifics .card .h6_move p {
         margin-top: -20px;
     }
 
@@ -138,6 +138,50 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
         width: 10cm;
     }
 
+    .modal1 {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        /* set a high z-index value to make it appear on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        color: black;
+        font-size: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+        /* add some opacity to the background */
+    }
+
+    .modal-content1 {
+        background-color: #fefefe;
+        margin: 15% auto;
+        color: black;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 50%;
+        font-size: 20px;
+        text-align: center;
+        position: relative;
+        /* add position:relative to make sure child elements are positioned relative to this parent element */
+    }
+
+    .close1 {
+        color: #000000;
+        font-size: 28px;
+        font-weight: bold;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+    }
+
+    .close1:hover,
+    .close1:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
 </style>
 
 <script>
@@ -156,6 +200,33 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
         console.log(elapsedTime);
         // do something with the elapsed time
     }
+
+    function calculateScore() {
+        let score = 0;
+        document.getElementById('score1').innerHTML = 'Your score: ' + score;
+        showModal();
+    }
+
+    function showModal() {
+        let score = 0;
+        document.getElementById('score1').innerHTML = 'Your score: ' + score;
+        const modal = document.getElementById("scoreModal1");
+        const closeButton = document.querySelector(".close1");
+
+        modal.style.display = "block";
+
+        closeButton.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // Add this line to handle window click event properly
+        window.addEventListener('click', function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    }
+
 </script>
 
 <body>
@@ -246,9 +317,18 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
 
             <div class="vertical_container">
 
-                <a href="./challengepage2.html"><button class="buttonnext hori_move" onclick="next()">Submit
-                    </button></a>
-                <!-- <a><button class="buttonnext">Submit </button></a> <br> -->
+                <a> <button class="buttonnext hori_move" onclick="calculateScore()">Submit
+                    </button>
+                </a>
+
+                <div id="scoreModal1" class="modal1">
+                    <div class="modal-content1">
+                        <!-- <span class="close">&times;</span> -->
+                        <p id="score1" class="submitbutton"></p>
+                        <div style="margin-left:-7.8cm"><a href="./challengepage3.html"> <button class="buttonnext">Next
+                                    <span>&#8594;</span></button> </a></div>
+                    </div>
+                </div>
 
                 <!-- <div class="testimotionals">
                     <div class="card2_specifics">
@@ -264,9 +344,7 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
                             </div>
                         </div>
                     </div>
-                </div> -->
-
-
+                </div>  -->
 
                 <div class="testimotionals">
                     <div class="card2_specifics">
@@ -276,24 +354,24 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
                             <div class="content h6_move">
                                 <h6>Options:</h6>
                                 <p>
-                                    <input type="radio" name="option" id="option1" 
-                                        required>
-                                    <label for="option1" style="font-size: 16px !important">"I had a feeling that the website was not legitimate, so I
+                                    <input type="radio" name="option" id="option1" required>
+                                    <label for="option1" style="font-size: 16px !important">"I had a feeling that the
+                                        website was not legitimate, so I
                                         decided to err on the side of caution and not share my password."</label><br>
 
-                                    <input type="radio" name="option" id="option2"
-                                        required>
-                                    <label for="option2"  style="font-size: 16px !important">"I was hesitant to provide my password as I couldn't verify the
+                                    <input type="radio" name="option" id="option2" required>
+                                    <label for="option2" style="font-size: 16px !important">"I was hesitant to provide
+                                        my password as I couldn't verify the
                                         authenticity of the website."</label><br>
 
-                                    <input type="radio" name="option" id="option3"
-                                        required>
-                                    <label for="option3"  style="font-size: 16px !important">"I thought it was odd that the website asked for my password
+                                    <input type="radio" name="option" id="option3" required>
+                                    <label for="option3" style="font-size: 16px !important">"I thought it was odd that
+                                        the website asked for my password
                                         when I hadn't given my password in the first place."</label><br>
 
-                                    <input type="radio" name="option" id="option4"
-                                        required>
-                                    <label for="option4"  style="font-size: 16px !important">"The request sounded slightly off, rather than what would have
+                                    <input type="radio" name="option" id="option4" required>
+                                    <label for="option4" style="font-size: 16px !important">"The request sounded
+                                        slightly off, rather than what would have
                                         been asked in a genuine website."</label><br>
                                 </p>
                                 <!-- <div class="details">
