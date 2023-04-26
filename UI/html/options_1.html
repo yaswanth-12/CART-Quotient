@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>CARTQ 1.0</title>
+    <title>CC1.0 | Challenge 1.0</title>
     <link rel="icon" href="../images/favicon.png">
     <link href="../css/challenge_body_stylesheet.css" rel="stylesheet">
     <link href="../css/challenge_card_stylesheet.css" rel="stylesheet">
@@ -203,12 +203,13 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
 
     function calculateScore() {
         let score = 0;
+        score = document.getElementById("answer").value;
         document.getElementById('score1').innerHTML = 'Your score: ' + score;
         showModal();
     }
 
     function showModal() {
-        let score = 0;
+        let score = document.querySelector('input[name="option"]:checked').value;
         document.getElementById('score1').innerHTML = 'Your score: ' + score;
         const modal = document.getElementById("scoreModal1");
         const closeButton = document.querySelector(".close1");
@@ -351,25 +352,25 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
                         <div class="card">
                             <div class="layer">
                             </div>
-                            <div class="content h6_move">
+                            <div class="content h6_move" name="answer" id="answer">
                                 <h6>Options:</h6>
                                 <p>
-                                    <input type="radio" name="option" id="option1" required>
+                                    <input type="radio" name="option" id="option1" value="10" required>
                                     <label for="option1" style="font-size: 16px !important">"I had a feeling that the
                                         website was not legitimate, so I
                                         decided to err on the side of caution and not share my password."</label><br>
 
-                                    <input type="radio" name="option" id="option2" required>
+                                    <input type="radio" name="option" id="option2" value="7" required>
                                     <label for="option2" style="font-size: 16px !important">"I was hesitant to provide
                                         my password as I couldn't verify the
                                         authenticity of the website."</label><br>
 
-                                    <input type="radio" name="option" id="option3" required>
+                                    <input type="radio" name="option" id="option3" value="4" required>
                                     <label for="option3" style="font-size: 16px !important">"I thought it was odd that
                                         the website asked for my password
                                         when I hadn't given my password in the first place."</label><br>
 
-                                    <input type="radio" name="option" id="option4" required>
+                                    <input type="radio" name="option" id="option4" value="0" required>
                                     <label for="option4" style="font-size: 16px !important">"The request sounded
                                         slightly off, rather than what would have
                                         been asked in a genuine website."</label><br>

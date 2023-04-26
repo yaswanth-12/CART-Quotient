@@ -510,24 +510,23 @@
     }
 
     .buttonnext {
-		background-color: rgb(206, 172, 92);
-		color: rgb(0, 0, 0);
-		border: 1px solid black;
-		border-radius: 5px;
-		padding: 8px 16px;
-		font-size: 23px;
-		transition-duration: 0.4s;
-		cursor: pointer;
-		font-family: "Century Gothic", sans-serif;
-	}
+        background-color: rgb(206, 172, 92);
+        color: rgb(0, 0, 0);
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 8px 16px;
+        font-size: 23px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        font-family: "Century Gothic", sans-serif;
+    }
 
-	.buttonnext:hover {
-		background-color: white;
-		color: black;
-		border: 1px solid black;
-		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-	}
-
+    .buttonnext:hover {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
 </style>
 
 <body>
@@ -539,40 +538,41 @@
                     <h2 class="title">Registration</h2>
                     <form method="POST">
                         <div class="input-group">
-                            <input class="input--style-1" type="text" placeholder="NAME" name="name">
+                            <input class="input--style-1" type="text" placeholder="NAME" id="name" required>
                         </div>
                         <div class="input-group">
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="designation">
-                                    <option disabled="disabled" selected="selected" required min="10">DESIGNATION</option>
-                                    <option>School Student</option>
-                                    <option>College Student</option>
-                                    <option>Working Professional</option>
-                                    <option>Senior citizen</option>
+                                <select id="designation" name="designation">
+                                    <option disabled="disabled" selected="selected" required min="10">DESIGNATION
+                                    </option>
+                                    <option value="1">School Student</option>
+                                    <option value="2">College Student</option>
+                                    <option value="3">Working Professional</option>
+                                    <option value="4">Senior citizen</option>
                                 </select>
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
                         <div class="input-group">
-                            <input class="input--style-1" type="number" placeholder="PHONE" name="phonenumber">
+                            <input class="input--style-1" type="number" placeholder="PHONE" id="phonenumber" required>
                         </div>
                         <div class="input-group">
-                            <input class="input--style-1" type="email" placeholder="EMAIL" name="email">
+                            <input class="input--style-1" type="email" placeholder="EMAIL" id="email" required>
                         </div>
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <input class="input--style-1" type="number" placeholder="AGE" name="age">
+                                    <input class="input--style-1" type="number" placeholder="AGE" id="age" required>
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="gender">
+                                        <select id="gender" name="gender" required>
                                             <option disabled="disabled" selected="selected">GENDER</option>
-                                            <option>Male</option>
-                                            <option>Female</option>
-                                            <option>Other</option>
+                                            <option value="1">Male</option>
+                                            <option value="2">Female</option>
+                                            <option value="3">Other</option>
                                         </select>
                                         <div class="select-dropdown"></div>
                                     </div>
@@ -582,7 +582,8 @@
                         <div class="row row-space">
                         </div>
                         <div class="p-t-20">
-                         <button class="buttonnext" onclick="closewindow()">Submit & Start test</button> 
+                            <a href="./challengepage1.html"> <button class="buttonnext">Submit & Start test </button>
+                            </a>
                         </div>
                     </form>
                 </div>
@@ -596,14 +597,28 @@
     <script src="../vendor/select2/select2.min.js"></script>
     <script src="../vendor/datepicker/moment.min.js"></script>
     <script src="../vendor/datepicker/daterangepicker.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mysql@2.18.1/dist/mysql.js"></script>
 
 
     <script>
 
-        function closewindow() {
-            window.open('Challenegepage1.html');
-            window.close();
-        }
+        var mysql = require('mysql');
+        var con = mysql.createConnection({
+            host: "localhost",
+            user: "root",
+            password: "",
+            database: "cyberclinic"
+        });
+
+        con.connect(function(err) {
+
+            if (err) throw err;
+            console.log("Connected!");
+            
+          });
+
+          
+
         (function ($) {
             'use strict';
             /*==================================================================

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>CARTQ 2.0</title>
+  <title>CC1.0 | Challenge 2</title>
   <link rel="icon" href="../images/favicon.png">
   <link href="../css/challenge_body_stylesheet.css" rel="stylesheet">
   <link href="../css/challenge_card_stylesheet.css" rel="stylesheet">
@@ -114,7 +114,7 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
   }
 
   function showModal() {
-    let score = 0;
+    let score = document.querySelector('input[name="audioOption"]:checked').value;
     document.getElementById('score1').innerHTML = 'Your score: ' + score;
     const modal = document.getElementById("scoreModal1");
     const closeButton = document.querySelector(".close1");
@@ -261,19 +261,19 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
                   Can you identify which among the four is genuine (NOT a scam)? <br>
                 <form>
                   <div class="option-container">
-                    <input type="radio" id="option1" name="audioOption">
+                    <input type="radio" id="option1" name="audioOption" value="0">
                     <label for="option1">Audio 1</label>
                   </div>
                   <div class="option-container">
-                    <input type="radio" id="option2" name="audioOption">
+                    <input type="radio" id="option2" name="audioOption" value="10">
                     <label for="option2">Aduio 2</label>
                   </div>
                   <div class="option-container">
-                    <input type="radio" id="option3" name="audioOption">
+                    <input type="radio" id="option3" name="audioOption" value="0">
                     <label for="option3">Audio 3</label>
                   </div>
                   <div class="option-container">
-                    <input type="radio" id="option4" name="audioOption">
+                    <input type="radio" id="option4" name="audioOption" value="0">
                     <label for="option4">Audio 4</label>
                   </div>
                 </form>
