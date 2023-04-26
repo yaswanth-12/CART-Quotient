@@ -19,37 +19,37 @@ Created Date: 19 Apr 2023
 Description: Assessment Page containing Problem Description, Attachment (if any), Answer Box, Progress Bar */
 
 
-.progress {
-  background: rgba(255, 255, 255, 0.1);
-  justify-content: flex-start;
-  border-radius: 100px;
-  align-items: center;
-  position: relative;
-  padding: 0 5px;
-  display: flex;
-  height: 30px;
-  width: 400px;
-  margin-left: -12cm;
-}
+  .progress {
+    background: rgba(255, 255, 255, 0.1);
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    padding: 0 5px;
+    display: flex;
+    height: 30px;
+    width: 400px;
+    margin-left: -12cm;
+  }
 
-.progress-value {
-  animation: load 3s normal forwards;
-  box-shadow: 0 10px 40px -10px #fff;
-  border-radius: 100px;
-  background: #fff;
-  height: 30px;
-  width: 0;
-}
-
-@keyframes load {
-  0% {
+  .progress-value {
+    animation: load 3s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #fff;
+    height: 30px;
     width: 0;
   }
 
-  100% {
-    width: 40%;
+  @keyframes load {
+    0% {
+      width: 0;
+    }
+
+    100% {
+      width: 40%;
+    }
   }
-}
 </style>
 
 <script>
@@ -132,13 +132,16 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
 
             </div>
             <div class="content biggerfont">
-              <p style="font-size: 21px;">You're a 17-year-old high school student who needs to log into your online college application portal. The portal contains sensitive personal information such as your grades, test scores, and social security number. You know the importance of setting a strong password to protect your information from hackers, so you decide to create a new password.
-
-                You open your laptop and navigate to the login page of the college application portal. You're prompted to create a new password and start thinking about what to choose. Now, click on the attachment and start entering the password.
-                
-                NOTE: You have only one attempt to set up a password. Points will be allocated on the basis of how strong you set up the password. 
-                HINT: Remember to follow the basic rules to be followed while setting up a password.
-                
+              <p style="font-size: 21px;">
+                As an employee at a military base with access to confidential information, you have been entrusted with
+                the responsibility of uploading and storing an important document on your personal laptop. <br><br>
+                In order to enhance security and prevent compromise, you are required to set up additional measures
+                beyond just
+                password protection. <br><br> One such measure involves the creation of security questions that must be
+                answered
+                correctly in order to access the document. <br><br> What would be the most effective questions to set up
+                in this
+                scenario?
               </p>
 
               <!-- <div class="details">
@@ -151,7 +154,7 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
 
       <div class="vertical_container">
 
-        <a href="./challengepage3.html" ><button class="buttonnext hori_move" onclick="next()">Next <span>&#8594;</span>
+        <a href="./challengepage3.html"><button class="buttonnext hori_move" onclick="next()">Next <span>&#8594;</span>
           </button></a>
         <a><button class="buttonnext">Submit </button></a> <br>
 
@@ -161,8 +164,10 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
               <div class="layer">
               </div>
               <div class="content">
-                <a target="_blank" href="./session1.html">
-                  <h6>View Attachment</h6>
+                <a target="_blank" href="./social media.html">
+                  <center>
+                    <h6>View Attachment</h6>
+                  </center>
                 </a>
                 <!-- <div class="details">
                   <h2> Someone famous <br> <span>Front end developer</span></h2>
