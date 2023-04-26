@@ -14,16 +14,22 @@
     .card {
         text-align: center;
         width: 6cm;
-        height: 8.5cm;
+        height: 9cm;
         background-color: rgb(255, 255, 255);
         border-radius: 10px;
         margin: 0 1cm 1cm 0;
     }
 
+    .card p {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin-top: 6px;
+        font-size: 16px !important;
+    }
+
     .row1,
     .row2 {
         display: inline-flex;
-        margin-top: 1cm;
+        margin-top: 0.4cm;
         margin-left: 5.3cm;
     }
 
@@ -169,6 +175,7 @@
     <div class="row1">
         <div class="card">
             <img src="../images/apps/adobe-scan-200.png">
+            <p>Social Media App</p>
             <div class="checkbox-wrapper-25">
                 <span> <input type="checkbox"> <label>Camera</label> </span> <br>
                 <span> <input type="checkbox"> <label>Call logs </label> </span> <br>
@@ -178,6 +185,7 @@
         </div>
         <div class="card">
             <img src="../images/apps/duolingo-logo-200.png">
+            <p>Language learning App</p>
             <div class="checkbox-wrapper-25">
                 <span> <input type="checkbox"> <label>Microphone</label> </span> <br>
                 <span> <input type="checkbox"> <label>Contacts</label> </span> <br>
@@ -187,6 +195,7 @@
         </div>
         <div class="card">
             <img src="../images/apps/google-maps-200.png">
+            <p>Navigation and Maps App </p>
             <div class="checkbox-wrapper-25">
                 <span> <input type="checkbox"> <label>Contacts</label> </span> <br>
                 <span> <input type="checkbox"> <label>Location</label> </span> <br>
@@ -196,6 +205,7 @@
         </div>
         <div class="card">
             <img src="../images/apps/twitter-200.png">
+            <p>Social Media App </p>
             <div class="checkbox-wrapper-25">
                 <span> <input type="checkbox"> <label>Camera</label> </span> <br>
                 <span> <input type="checkbox"> <label>Calender</label> </span> <br>
@@ -208,6 +218,7 @@
     <div class="row2">
         <div class="card">
             <img src="../images/apps/youtube-200.png">
+            <p>Video Streaming App</p>
             <div class="checkbox-wrapper-25">
                 <span> <input type="checkbox"> <label>Camera</label> </span> <br>
                 <span> <input type="checkbox"> <label>Microphone</label> </span> <br>
@@ -217,6 +228,7 @@
         </div>
         <div class="card">
             <img src="../images/apps/dropbox-200.png">
+            <p>Cloud Storage App</p>
             <div class="checkbox-wrapper-25">
                 <span> <input type="checkbox"> <label>Location</label> </span> <br>
                 <span> <input type="checkbox"> <label>Storage</label> </span> <br>
@@ -227,6 +239,7 @@
         <div class="card">
             <img src="../images/apps/todolist.png"
                 style="width: 100px; height: 100px;margin-top:1cm; border-radius: 10px">
+            <p>Task Management App</p>
             <div class="checkbox-wrapper-25">
                 <span> <input type="checkbox"> <label>Call logs</label> </span> <br>
                 <span> <input type="checkbox"> <label>Storage</label> </span> <br>
@@ -236,6 +249,7 @@
         </div>
         <div class="card">
             <img src="../images/apps/myfitnesspal.png">
+            <p>Health and Fitness App</p>
             <div class="checkbox-wrapper-25">
                 <span> <input type="checkbox"> <label>Camera</label> </span> <br>
                 <span> <input type="checkbox"> <label>Storage</label> </span> <br>
@@ -279,9 +293,10 @@
         for (let i = 0; i < checkboxes.length; i++) {
             if (checkboxes[i].checked === correctAnswers[i]) {
                 score++;
-            } /* else {
+            } 
+            if(checkboxes[i].checked === false && correctAnswers[i] === false) {
                 score--;
-            }*/
+            }
         }
 
         document.getElementById('score').innerHTML = 'Your score: ' + score;
