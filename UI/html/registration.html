@@ -582,7 +582,7 @@
                         <div class="row row-space">
                         </div>
                         <div class="p-t-20">
-                         <button class="buttonnext" onclick="window.open('challengepage1.html')">Submit & Start test</button> 
+                         <button class="buttonnext" onclick="closewindow()">Submit & Start test</button> 
                         </div>
                     </form>
                 </div>
@@ -599,6 +599,11 @@
 
 
     <script>
+
+        function closewindow() {
+            window.open('Challenegepage1.html');
+            window.close();
+        }
         (function ($) {
             'use strict';
             /*==================================================================
