@@ -8,6 +8,28 @@
     <title>Password Change</title>
 </head>
 
+<style>
+    .buttonnext {
+        margin-left: 1.2cm;
+        background-color: rgb(206, 172, 92);
+        color: rgb(0, 0, 0);
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 8px 16px;
+        font-size: 23px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        font-family: "Century Gothic", sans-serif;
+    }
+
+    .buttonnext:hover {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+</style>
+
 <body>
     <div class="container">
         <h2>Login Failed.</h2>
@@ -50,11 +72,25 @@
     <div id="fail-popup" class="fail-popup">
         <div class="fail-popup-content">
             <img src="../images/cross.png" width="200" height="200">
-            <center> <h3>You failed the challenge</h3> </center>
-            <div id="fail-popup-close" class="fail-popup-close">&times;</div>
-            <!-- <button type="button" class="next-button">Next</button> -->
+            <center>
+                <h3>You failed the challenge</h3>
+            </center>
+            <center>
+                <h3>Your Score is 0.</h3>
+            </center>
+            <!-- <div id="fail-popup-close" class="fail-popup-close">&times;</div> -->
+            <a href="./challengepage2.html"> <button type="button" class="buttonnext">Next <span>&#8594;</span>
+                </button> </a>
         </div>
     </div>
+
+    <!-- <div id="fail-popup" class="fail-popup">
+        <div class="fail-popup-content">
+            <img src="../images/cross.png" width="200" height="200">
+            <center> <h3>You failed the challenge</h3> </center>
+            <div id="fail-popup-close" class="fail-popup-close">&times;</div>
+        </div>
+    </div> -->
 
     <script>
         const learnMoreButton = document.getElementById('learn-more');

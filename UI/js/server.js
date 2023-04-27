@@ -1,40 +1,30 @@
-// Requiring modules
 const express = require('express');
+const mysql = require('mysql');
+
 const app = express();
-const mssql = require("mysql");
 
-// Get request
-app.get('/', function (req, res) {
-
-    // Config your database credential
-    const config = {
-        host: "localhost",
-        user: "root",
-        password: "",
-        database: "cyberclinic"
-    };
-
-    // Connect to your database
-    mssql.connect(config, function (err) {
-
-        // Create Request object to perform
-        // query operation
-        let request = new mssql.Request();
-
-        // Query to the database and get the records
-        request.query('select * from user',
-            function (err, records) {
-
-                if (err) console.log(err)
-
-                // Send records as a response
-                // to browser
-                res.send(records);
-
-            });
-    });
+const con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "",
+  database: "cyberclinic"
 });
 
-let server = app.listen(5000, function () {
-    console.log('Server is listening at port 5000...');
+app.use(express.json());
+
+app.post('/register', (req, res) => {
+  const { name, age, designation, phone, email, gender } = req.body;
+
+  const cartId = Math.floor(Math.random() * 5001);
+
+  const sqlquery = `INSERT INTO user (cartq_id, name, age, designation, phone, email, total_duration, final_cq) 
+    VALUES (${cartId}, '${name}', ${age}, '${designation}', '${phone}', '${email}', 0, 0)`;
+
+  con.query(sqlquery, (err, result) => {
+    if (err) throw err;
+
+    res.status(200).json({ message: 'User created successfully.' });
+  });
 });
+
+app.listen(3000, () => console.log('Server started on port 3000.'));

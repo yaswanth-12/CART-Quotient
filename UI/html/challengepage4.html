@@ -124,19 +124,30 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
   }
 
   function calculateScore() {
-    let score = 0;
-    correctAnswers = [true, true, true, true, false, false, false, false, false, false];
+    var score = 0;
+    const correctAnswers = [true, true, true, true, false, false, false, false, false, false];
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    console.log(checkboxes.checked);
-    document.getElementById('score1').innerHTML = 'Your score: ' + score;
-    showModal();
+    console.log(checkboxes.length);
+    for (let i = 0; i < checkboxes.length; i++) {
+      if (checkboxes[i].checked && correctAnswers[i]) {
+        score++;
+        console.log(score);
+      }
+    }
+    if (score < 0) {
+      score = 0;
+    }
+    /* document.getElementById('score1').innerHTML = 'Your score: ' + score; */
+    showModal(score);
   }
 
-  function showModal() {
-    let score = 0;
-    document.getElementById('score1').innerHTML = 'Your score: ' + score;
+
+
+  function showModal(score) {
     const modal = document.getElementById("scoreModal1");
     const closeButton = document.querySelector(".close1");
+    const scoreElement = document.getElementById('score1');
+    scoreElement.innerHTML = 'Your score: ' + score;
 
     modal.style.display = "block";
 
@@ -151,6 +162,7 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
       }
     });
   }
+
 
 </script>
 
