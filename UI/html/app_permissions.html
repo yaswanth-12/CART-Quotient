@@ -293,8 +293,11 @@
         for (let i = 0; i < checkboxes.length; i++) {
             if (checkboxes[i].checked === correctAnswers[i]) {
                 score++;
-            } 
+            }
             if(checkboxes[i].checked === false && correctAnswers[i] === false) {
+                score--;
+            }
+            if(checkboxes[i].checked === true && correctAnswers[i] === false ) {
                 score--;
             }
         }
