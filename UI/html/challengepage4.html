@@ -125,6 +125,9 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
 
   function calculateScore() {
     let score = 0;
+    correctAnswers = [true, true, true, true, false, false, false, false, false, false];
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    console.log(checkboxes.checked);
     document.getElementById('score1').innerHTML = 'Your score: ' + score;
     showModal();
   }
@@ -148,6 +151,7 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
       }
     });
   }
+
 </script>
 
 <body>
@@ -214,9 +218,12 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
             <div class="content biggerfont">
               <p style="font-size: 21px;">As an employee at a military base with access to confidential information, you
                 have been entrusted with the responsibility of uploading and storing an important document on your
-                personal laptop. <br><br> In order to enhance security and prevent compromise, you are required to set up
-                additional measures beyond just password protection. <br><br> One such measure involves the creation of security
-                questions that must be answered correctly in order to access the document.<br><br> What would be the most
+                personal laptop. <br><br> In order to enhance security and prevent compromise, you are required to set
+                up
+                additional measures beyond just password protection. <br><br> One such measure involves the creation of
+                security
+                questions that must be answered correctly in order to access the document.<br><br> What would be the
+                most
                 effective questions to set up in this scenario?
               </p>
 
@@ -267,28 +274,28 @@ Description: Assessment Page containing Problem Description, Attachment (if any)
                   <p> What are the good security questions from above? </p>
                   <div class="opts2">
                     <div class="checkbox-container">
-                      <input type="checkbox" id="q1" name="q1">
+                      <input type="checkbox" id="q1" name="q1" value="true">
                       <label for="q1">Question 1</label>
                     </div>
                     <div class="checkbox-container">
-                      <input type="checkbox" id="q2" name="q2" class="opts22">
+                      <input type="checkbox" id="q2" name="q2" class="opts22" value="true">
                       <label for="q2">Question 2</label>
                     </div>
                   </div>
 
                   <div class="opts2">
                     <div class="checkbox-container">
-                      <input type="checkbox" id="q3" name="q3">
+                      <input type="checkbox" id="q3" name="q3" value="true">
                       <label for="q3">Question 3</label>
                     </div>
                     <div class="checkbox-container">
-                      <input type="checkbox" id="q4" name="q4" class="opts22">
+                      <input type="checkbox" id="q4" name="q4" class="opts22" value="true">
                       <label for="q4">Question 4</label>
                     </div>
                   </div>
                   <div class="opts2">
                     <div class="checkbox-container">
-                      <input type="checkbox" id="q5" name="q5">
+                      <input type="checkbox" id="q5" name="q5" value="false">
                       <label for="q5">Question 5</label>
                     </div>
                     <div class="checkbox-container">
