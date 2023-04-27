@@ -277,7 +277,7 @@ li a:hover {
   color: black;
   opacity: 0;
   transform: translateY(30px);
-  transition: 0.5s;
+  transition: 0s;
 }
 
 .card:hover .info {
