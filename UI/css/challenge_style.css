@@ -285,6 +285,10 @@ li a:hover {
   transform: translateY(0px);
 }
 
+.card:hover p {
+  font-size: 0px;
+}
+
 .card .info p {
   letter-spacing: 1px;
   font-size: 30px;
